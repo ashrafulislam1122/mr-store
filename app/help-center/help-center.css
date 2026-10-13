@@ -1,0 +1,262 @@
+
+.help-page {
+  min-height: 100vh;
+  padding: 0 7%;
+  background: #10110d;
+  color: #f5f3e9;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.help-nav {
+  min-height: 82px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #303128;
+}
+
+.help-brand {
+  color: #f5f3e9;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+.help-brand span {
+  color: #bdc797;
+}
+
+.help-back {
+  color: #d0d0c4;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.help-back:hover {
+  color: #bdc797;
+}
+
+.help-hero {
+  padding: 100px 0 95px;
+  max-width: 780px;
+  animation: help-rise 0.7s ease both;
+}
+
+.help-eyebrow {
+  color: #bdc797;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.4px;
+}
+
+.help-hero h1 {
+  margin: 24px 0;
+  font-size: clamp(48px, 8vw, 86px);
+  line-height: 1.06;
+  letter-spacing: -4px;
+}
+
+.help-hero h1 span {
+  color: #bdc797;
+}
+
+.help-hero > p:not(.help-eyebrow) {
+  max-width: 540px;
+  color: #b7b8aa;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.help-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 22px;
+  padding: 15px 20px;
+  background: #c2ce96;
+  color: #17190f;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.25s, background 0.25s;
+}
+
+.help-button:hover {
+  transform: translateY(-3px);
+  background: #d5dfb2;
+}
+
+.help-topics {
+  padding: 30px 0 85px;
+}
+
+.help-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+.help-section-heading h2,
+.help-contact h2 {
+  margin: 12px 0 0;
+  font-size: clamp(25px, 4vw, 36px);
+  letter-spacing: -1px;
+}
+
+.help-count {
+  color: #898b7d;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.help-card {
+  position: relative;
+  min-height: 190px;
+  padding: 25px;
+  border: 1px solid #33352a;
+  border-radius: 7px;
+  background: #171811;
+  transition: transform 0.25s, border-color 0.25s;
+}
+
+.help-card:hover {
+  transform: translateY(-4px);
+  border-color: #929d6b;
+}
+
+.help-number {
+  color: #bdc797;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+.help-card h3 {
+  margin: 22px 0 10px;
+  font-size: 21px;
+}
+
+.help-card p {
+  max-width: 390px;
+  padding-right: 12px;
+  color: #aeb0a1;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.help-arrow {
+  position: absolute;
+  top: 22px;
+  right: 24px;
+  color: #bdc797;
+  font-size: 19px;
+}
+
+.help-contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 36px;
+  margin-bottom: 70px;
+  border: 1px solid #3a3c2e;
+  border-radius: 7px;
+  background: #191a13;
+}
+
+.help-contact > div {
+  max-width: 520px;
+}
+
+.help-contact > div > p:last-child {
+  color: #aeb0a1;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.help-contact .help-button {
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+.help-footer {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 18px;
+  border-top: 1px solid #303128;
+  color: #898b7d;
+  font-size: 11px;
+}
+
+.help-footer a {
+  color: #b7b8aa;
+  text-decoration: none;
+}
+
+.help-footer a:hover {
+  color: #bdc797;
+}
+
+@keyframes help-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 650px) {
+  .help-page {
+    padding: 0 5%;
+  }
+
+  .help-hero {
+    padding: 75px 0;
+  }
+
+  .help-hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-contact {
+    padding: 25px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .help-footer {
+    padding: 22px 0;
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .help-hero {
+    animation: none;
+  }
+
+  .help-card,
+  .help-button {
+    transition: none;
+  }
+}
